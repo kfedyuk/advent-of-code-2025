@@ -1,19 +1,10 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() throws IOException {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+    IO.println("Hello and welcome to Advent of Code 2025!");
 
-    /*for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
-    }*/
-
-    List<String> day1input = ReaderUtil.readLines("src/day1-input.txt");
-    Day1 day1 = new Day1(day1input);
-    day1.decipherPassword2();
-    IO.println(day1.getActualPassword());
+    Day2 day2 = new Day2();
+    day2.computeInvalidIDTotal2("src/day2-input.txt");
+    IO.println(day2.getTotalSum());
 }
 

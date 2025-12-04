@@ -1,6 +1,8 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
-import static java.lang.Math.abs;
 
 public class Day1 {
 
@@ -8,8 +10,8 @@ public class Day1 {
     private int actualPassword;
     private int dial;
 
-    public Day1(List<String> inputData) {
-        this.inputData = inputData;
+    public Day1(String inputData) throws IOException {
+        this.inputData = readInput(inputData);
         this.actualPassword = 0;
         this.dial = 50;
     }
@@ -50,5 +52,8 @@ public class Day1 {
         return actualPassword;
     }
 
+    public List<String> readInput(String fileName) throws IOException {
+        return  Files.readAllLines(Paths.get(fileName));
+    }
 
 }
